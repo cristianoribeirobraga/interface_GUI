@@ -70,27 +70,27 @@ class YouTube(QtWidgets.QMainWindow):
 
     def fechar(self):
         # Cria o objeto ou seja a caixa de mensagem
-        msg = QMessageBox()
+        self.msg = QMessageBox()
         # Define o tipo da caixa de mensagem
-        msg.setIcon(QMessageBox.Warning)
+        self.msg.setIcon(QMessageBox.Warning)
         # Define o ícone da caixa de mensagem
-        msg.setWindowIcon(QtGui.QIcon(r'E:\QT_Creator\download.png'))
+        self.msg.setWindowIcon(QtGui.QIcon(r'E:\QT_Creator\download.png'))
         # Define o título da janela
-        msg.setWindowTitle('ATENÇÃO')
+        self.msg.setWindowTitle('ATENÇÃO')
         # Define a mensagem principal
-        msg.setText('Deseja sair do programa?')
-        msg.setStandardButtons(QMessageBox.Cancel | QMessageBox.Ok)
+        self.msg.setText('Deseja sair do programa?')
+        self.msg.setStandardButtons(QMessageBox.Cancel | QMessageBox.Ok)
         # Define um botão para a caixa de mensagem
-        btSim = msg.button(QMessageBox.Ok)
+        btSim = self.msg.button(QMessageBox.Ok)
         # Define o texto do botão Ok da caixa de mensagem
         btSim.setText('Sim')
         # Define um botão para a caixa de mensagem
-        btNao = msg.button(QMessageBox.Cancel)
+        btNao = self.msg.button(QMessageBox.Cancel)
         # Define o texto do botão Cancel da caixa de mensagem
         btNao.setText('Não')
         # Exibir a caixa de mensagem
-        msg.exec()
-        if msg.clickedButton() == btSim:
+        self.msg.exec()
+        if self.msg.clickedButton() == btSim:
             sys.exit(0)
         else:
             pass
