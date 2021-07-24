@@ -1,10 +1,10 @@
+# importando bibliotecas necessarias
 from PyQt5 import QtWidgets, uic, QtGui
 import sys
-
 from PyQt5.QtWidgets import QMessageBox
 from mhyt import yt_download
 
-### Imagem ###
+# Importar arquivo da imagem
 import youtube_rc
 
 class YouTube(QtWidgets.QMainWindow):
